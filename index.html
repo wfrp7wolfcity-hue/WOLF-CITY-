@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WOLF CITY RP</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#09060f;color:#fff;font-family:Arial,Tahoma,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:root{--purple:#8b3dff;--light:#c6a0ff;--panel:#130d1e}
+.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.bg i{position:absolute;border:1px solid #7925ad55;animation:floatSquare 16s linear infinite}
+.bg i:nth-child(1){width:60px;height:60px;left:8%;top:70%}
+.bg i:nth-child(2){width:35px;height:35px;left:24%;top:25%;animation-duration:20s}
+.bg i:nth-child(3){width:80px;height:80px;left:50%;top:65%;animation-duration:23s}
+.bg i:nth-child(4){width:45px;height:45px;left:76%;top:20%;animation-duration:18s}
+.bg i:nth-child(5){width:28px;height:28px;left:91%;top:80%;animation-duration:13s}
+@keyframes floatSquare{0%{transform:translateY(100px) rotate(0);opacity:0}50%{opacity:.8}100%{transform:translateY(-200px) rotate(90deg);opacity:0}}
+header{position:sticky;top:0;z-index:5;background:#0b0712ed;border-bottom:1px solid #7628aa55;backdrop-filter:blur(12px)}
+nav{max-width:1150px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}
+.brand img{width:43px;height:43px;object-fit:contain}
+.brand span{color:var(--light)}
+.links{display:flex;gap:18px;font-size:13px;color:#d5c9e1}
+.links a:hover{color:#c29aff}
+.discord{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(120deg,#8734ff,#5720b8);border:1px solid #b58aff;padding:11px 16px;border-radius:8px;font-weight:bold;font-size:13px;color:white;transition:.25s}
+.discord:hover{transform:translateY(-3px);box-shadow:0 0 25px #8734ff66}
+.discord img{width:25px;height:25px;object-fit:contain;animation:discordFloat 1.7s infinite ease-in-out}
+@keyframes discordFloat{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-6px) rotate(7deg)}}
+.hero{max-width:1150px;margin:25px auto;padding:35px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:25px;background:linear-gradient(110deg,#100a19,#170d25);border:1px solid #7c35b74d;border-radius:13px}
+.hero small,.eyebrow{color:#bf91ff;letter-spacing:2px;font-size:11px}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.3;margin:18px 0}
+h1 span{color:#b98aff}
+.hero p{font-size:14px;line-height:2.2;color:#d0c5db}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.outline{padding:11px 15px;border:1px solid #70429a;border-radius:8px;font-size:13px}
+.hero-logo{text-align:center}
+.hero-logo img{width:min(290px,100%);max-height:280px;object-fit:contain;animation:wolfFloat 4s ease-in-out infinite;filter:drop-shadow(0 0 18px #8b3dff40)}
+@keyframes wolfFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.section{max-width:1150px;margin:55px auto;padding:0 20px}
+.heading{text-align:center;margin-bottom:25px}
+.heading h2{font-size:29px;margin:10px 0}
+.heading p{font-size:13px;line-height:2;color:#bdb1cc}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.gallery a{height:190px;display:block;border:1px solid #7434a6;border-radius:9px;overflow:hidden;background:#160e20}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.gallery a:hover img{transform:scale(1.06)}
+.departments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:#120c1beF;border:1px solid #7733a94d;border-radius:11px;overflow:hidden;transition:.25s}
+.card:hover{border-color:#a56aff;transform:translateY(-3px)}
+.card-top{padding:22px;display:flex;align-items:center;gap:17px;background:linear-gradient(120deg,#241334,#120b1b);border-bottom:1px solid #ffffff10}
+.card-top img{width:90px;height:90px;object-fit:contain}
+.card-top h3{font-size:24px;margin-bottom:8px}
+.card-top small{color:#c7a1ff;font-size:10px;line-height:1.7}
+.card-body{padding:22px}
+.card-body h4{color:#c4a0ff;margin-bottom:10px}
+.card-body p,.card-body li{color:#c9bed5;font-size:13px;line-height:2.1}
+.card-body ul{list-style:none;margin-top:12px}
+.card-body li{padding:7px 17px 7px 0;border-bottom:1px solid #ffffff0b;position:relative}
+.card-body li:before{content:"";position:absolute;right:0;top:16px;width:6px;height:6px;background:#9b56ff;transform:rotate(45deg)}
+.ems .card-top{background:linear-gradient(120deg,#10232c,#120b1b)}
+.ems .card-top small,.ems .card-body h4{color:#8edfff}
+.ems .card-body li:before{background:#75d8ff}
+.join{max-width:1100px;margin:35px auto 55px;padding:40px 20px;text-align:center;border:1px solid #7833aa66;border-radius:12px;background:#120b1beF}
+.join h2{font-size:28px;margin:10px 0}
+.join p{font-size:13px;color:#c7bbd3;line-height:2;margin-bottom:20px}
+footer{text-align:center;padding:23px;border-top:1px solid #7530a544;color:#a89bb6;font-size:12px}
+footer b{color:#c5a0ff}
+@media(max-width:720px){
+nav{flex-wrap:wrap;padding:10px 12px}.links{display:none}.brand{font-size:13px}.brand img{width:36px;height:36px}
+.hero{margin:14px;padding:24px 17px;grid-template-columns:1fr;text-align:center}
+.hero-logo img{width:205px;max-height:210px}.hero p{margin:auto}.actions{justify-content:center}
+.section{padding:0 13px;margin:42px auto}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.gallery a{height:135px}
+.departments{grid-template-columns:1fr}.card-top img{width:75px;height:75px}.heading h2{font-size:25px}
+.join{margin:25px 13px 35px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+<header>
+<nav>
+<a class="brand" href="#home">
+<img src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/27bdbb57-f854-4f3a-809a-dbf7212f91f5.png" alt="WOLF CITY">
+<div>WOLF CITY <span>RP</span></div>
+</a>
+<div class="links">
+<a href="#home">الرئيسية</a>
+<a href="#gallery">صور المدينة</a>
+<a href="#departments">القطاعات</a>
+<a href="#join">الانضمام</a>
+</div>
+<a class="discord" href="https://discord.gg/WXBzdpgXx" target="_blank" rel="noopener">
+<img src="https://cdn.simpleicons.org/discord/FFFFFF" alt="Discord"> ديسكورد
+</a>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div>
+<small>LOS ANGELES CRIMES ROLEPLAY</small>
+<h1>WOLF CITY <span>RP</span></h1>
+<p>أهلاً بك في وولف سيتي، مدينة رول بلاي تجمع الشخصيات والقطاعات الحكومية والقصص المختلفة. اكتشف المدينة وابدأ رحلتك مع مجتمعنا.</p>
+<div class="actions">
+<a class="discord" href="https://discord.gg/WXBzdpgXx" target="_blank" rel="noopener">
+<img src="https://cdn.simpleicons.org/discord/FFFFFF" alt="Discord"> انضم إلى السيرفر
+</a>
+<a class="outline" href="#gallery">استكشف صور المدينة ↓</a>
+</div>
+</div>
+<div class="hero-logo">
+<img src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/27bdbb57-f854-4f3a-809a-dbf7212f91f5.png" alt="شعار الذئب WOLF CITY">
+</div>
+</section>
+
+<section class="section" id="gallery">
+<div class="heading">
+<div class="eyebrow">CITY SCREENSHOTS</div>
+<h2>صور من المدينة</h2>
+<p>استعرض لقطات من عالم WOLF CITY RP.</p>
+</div>
+<div class="gallery">
+<a href="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/b688255f-549b-4592-aec0-21854eed14c1.jpg" target="_blank"><img loading="lazy" src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/b688255f-549b-4592-aec0-21854eed14c1.jpg" alt="صورة المدينة 1"></a>
+<a href="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/4fe7902d-2f80-4d77-bc26-9cbe19580589.jpg" target="_blank"><img loading="lazy" src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/4fe7902d-2f80-4d77-bc26-9cbe19580589.jpg" alt="صورة المدينة 2"></a>
+<a href="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/873ff046-e44b-4b4e-b332-1ec64e3493c0.jpg" target="_blank"><img loading="lazy" src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/873ff046-e44b-4b4e-b332-1ec64e3493c0.jpg" alt="صورة المدينة 3"></a>
+<a href="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/30a90f79-3186-49bf-a275-4e14ad925619.jpg" target="_blank"><img loading="lazy" src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/30a90f79-3186-49bf-a275-4e14ad925619.jpg" alt="صورة المدينة 4"></a>
+<a href="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/9b33d80c-c773-459e-aa17-40df990ab494.jpg" target="_blank"><img loading="lazy" src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/9b33d80c-c773-459e-aa17-40df990ab494.jpg" alt="صورة المدينة 5"></a>
+<a href="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/d4426180-5c34-449c-a720-f73a3c8f4830.jpg" target="_blank"><img loading="lazy" src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/d4426180-5c34-449c-a720-f73a3c8f4830.jpg" alt="صورة المدينة 6"></a>
+</div>
+</section>
+
+<section class="section" id="departments">
+<div class="heading">
+<div class="eyebrow">OFFICIAL DEPARTMENTS</div>
+<h2>القطاعات الحكومية</h2>
+<p>تعرف على القطاعات الأساسية ومسؤولياتها داخل المدينة.</p>
+</div>
+<div class="departments">
+<article class="card">
+<div class="card-top">
+<img src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/4818a2c3-92dd-449e-a3ec-f1da502043a6.png" alt="شعار الشرطة LS PD" loading="lazy">
+<div><h3>LS PD</h3><small>LOS SANTOS POLICE DEPARTMENT</small></div>
+</div>
+<div class="card-body">
+<h4>قطاع الشرطة</h4>
+<p>يتولى قطاع الشرطة حماية سكان المدينة والمحافظة على الأمن وتطبيق القوانين والتعامل مع البلاغات والحوادث وفق نظام الرول بلاي.</p>
+<ul>
+<li>حماية المواطنين والممتلكات.</li>
+<li>الاستجابة للبلاغات والحوادث.</li>
+<li>مكافحة الجريمة وتطبيق القانون.</li>
+<li>تنظيم المرور والمحافظة على النظام.</li>
+<li>التنسيق مع الإسعاف في حالات الطوارئ.</li>
+</ul>
+</div>
+</article>
+
+<article class="card ems">
+<div class="card-top">
+<img src="https://i.supaimg.com/56a32496-e13e-4138-803d-740d4f39a0ce/da1efcf4-83a5-4681-a309-a6f2d8de16ac.png" alt="شعار الإسعاف EMS" loading="lazy">
+<div><h3>EMS</h3><small>EMERGENCY MEDICAL SERVICES</small></div>
+</div>
+<div class="card-body">
+<h4>قطاع الإسعاف</h4>
+<p>يقدم قطاع الإسعاف الرعاية الطبية الطارئة للمصابين والمرضى ويستجيب لطلبات المساعدة وينسق مع الجهات الأخرى في مواقع الحوادث.</p>
+<ul>
+<li>الاستجابة لبلاغات الطوارئ.</li>
+<li>تقديم الإسعافات الأولية للمصابين.</li>
+<li>نقل المرضى إلى المستشفى عند الحاجة.</li>
+<li>تقييم الحالات وتحديد أولوية العلاج.</li>
+<li>المحافظة على سلامة المرضى واحترامهم.</li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+
+<section class="join" id="join">
+<div class="eyebrow">JOIN WOLF CITY</div>
+<h2>جاهز تدخل المدينة؟</h2>
+<p>انضم إلى مجتمع WOLF CITY RP وتابع أخبار السيرفر وتحديثاته.</p>
+<a class="discord" href="https://discord.gg/WXBzdpgXx" target="_blank" rel="noopener">
+<img src="https://cdn.simpleicons.org/discord/FFFFFF" alt="Discord"> دخول ديسكورد WOLF CITY
+</a>
+</section>
+</main>
+
+<footer><b>WOLF CITY RP</b> · LOS ANGELES CRIMES</footer>
+</body>
+</html>
